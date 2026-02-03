@@ -37,3 +37,13 @@ pip install -r requirements.txt
 ---
 
 Continue working on it:)
+
+
+---
+Uploading updated notebook
+
+```
+git add .
+git commit -m "<insert message>"
+git push origin main
+```
