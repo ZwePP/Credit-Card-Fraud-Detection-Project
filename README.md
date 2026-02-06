@@ -1,49 +1,59 @@
-### How to Start (Local Windows)
+# Fraud Detection Using Machine Learning
 
-First clone this git
+## Overview
 
-```
-git clone https://github.com/ZwePP/Credit-Card-Fraud-Detection-Project.git
-```
+This project focuses on detecting fraudulent transactions using machine learning models. The dataset is preprocessed and balanced to contain **50% fraud and 50% non-fraud** samples. Two models are trained and evaluated: **Logistic Regression** and **XGBoost**.
 
-Download a dataset from kaggle : https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/data
+## Dataset
 
-Make a folder name "data" and place the dataset csv file inside /data.
+- The dataset contains transaction features and a target column `Class`
+- `Class = 0` → No Fraud
+- `Class = 1` → Fraud
+- Data is cleaned and balanced before training
 
----
+## Data Splitting
 
-Next setup an Python environment.
-Open an CMD in your folder directory and run.
+The dataset is split into:
 
-```
-python -m venv .venv
+- **Training set** – used to train the models
+- **Validation set** – used to tune and compare models
+- **Test set** – used for final evaluation on unseen data
 
-```
+## Models Used
 
-After creating an environment.
-Activate it (inside cmd as well).
+- Logistic Regression
+- XGBoost Classifier
 
-```
-.venv\Scripts\activate
+## Evaluation Metrics
 
-```
+The models are evaluated using:
 
-After activation. Install requirements
+- Accuracy
+- Confusion Matrix
+- Precision, Recall, and F1-score
+- Precision–Recall Curve
+- Average Precision (AP)
 
-```
-pip install -r requirements.txt
-```
+## Results
 
----
+- Both models achieved strong performance on validation and test datasets
+- Precision–Recall curves show a good balance between precision and recall
+- XGBoost performs slightly better in detecting fraud cases at higher recall levels
 
-Continue working on it:)
+## Conclusion
 
+Both Logistic Regression and XGBoost generalize well to unseen data. Logistic Regression performs well with high-confidence predictions, while XGBoost provides a better trade-off when higher fraud detection coverage is required.
 
----
-Uploading updated notebook
+## Tools and Libraries
 
-```
-git add .
-git commit -m "<insert message>"
-git push origin main
-```
+- Python
+- Scikit-learn
+- XGBoost
+- Matplotlib
+- Seaborn
+
+## How to Run
+
+1. Open the Jupyter Notebook (`Group2.ipynb`)
+2. Run all cells in order
+3. Review model evaluation results and graphs
